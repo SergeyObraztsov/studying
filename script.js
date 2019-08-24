@@ -1,8 +1,16 @@
 let money = 100; 
-let income = 1000;
-let addExpenses = 750;
-let deposit = 50;
+let income = 'Закладки';
+let addExpenses = 'Квартира, машина, учеба';
+let deposit = true;
 let mission = 16000; 
-let period = 1.5;
-alert('У меня есть ' + money + 'и скоро придет моя з/п ' + income);
-console.log('Но, если по секрету, я все пробухаю))');
+let period = 4;
+console.log(typeof money);
+console.log(typeof income);
+console.log(typeof deposit);
+console.log(income.length);
+console.log('Период ' + period + ' месяцев');
+console.log('Цель заработать ' + mission + ' долларов');
+let myArr = addExpenses.toLowerCase().split();
+console.log(myArr);
+let budgetDay = money/30 
+console.log(budgetDay, money%30);
