@@ -6,5 +6,5 @@ while (num > 0) {
 }
 console.log("result: " + a);
 a = a**3
-let myVar = '' + a
+let myVar = a.toString()
 console.log(myVar.substring(0,2));
