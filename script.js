@@ -16,8 +16,8 @@ let expenses1 = prompt('Какие обязательные ежемесячны
 let price1 = prompt('Во сколько это обойдется?');
 let expenses2 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
 let price2 = prompt('Во сколько это обойдется?');
+
 let budgetMonth = money - price1 - price2
-console.log('budgetMonth: ', budgetMonth);
 
 let budgetDay = budgetMonth / 30;
 Math.floor(budgetDay)
