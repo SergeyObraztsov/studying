@@ -28,8 +28,16 @@ let appData = {
     asking: function(){
 
         if (confirm('есть ли у вас дополнительный заработок?')){
-            let incomeName = prompt('Какой у вас дополнительный заработок?', 'Таксую');
-            let cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
+            let incomeName,
+                cashIncome;
+            do{
+                incomeName = prompt('Какой у вас дополнительный заработок?', 'Таксую');
+            }
+            while(incomeName === '' || incomeName === null || /[0-9]/.test(incomeName));
+            do{
+                cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?', 10000);
+            }
+            while(cashIncome === '' || isNaN(cashIncome) || cashIncome === null);
             this.income[incomeName] = cashIncome;
         }
 
@@ -37,9 +45,12 @@ let appData = {
         this.addExpenses = addExpenses.toLowerCase().split(',');
         this.deposit = confirm('Есть ли у вас депозит в банке?');
         for (let i = 0; i < 2; i++){
-
-            let expensesName = prompt('Введите обязательную статью расходов', 'Квартплата');
-            let expense;
+            let expense,
+                expensesName;
+            do{
+                expensesName = prompt('Введите обязательную статью расходов', 'Квартплата');
+            }
+            while (expensesName === '' || expensesName === null || /[0-9]/.test(expensesName));
             do{
                 expense = prompt('Во сколько это обойдется?', 2000);
             }
@@ -72,8 +83,15 @@ let appData = {
     },
     getInfoDeposit: function(){
         if (this.deposit){
-            this.percentDeposit = prompt('Какой годовой процент?', '10');
-            this.moneyDeposit = prompt('Какая сумма заложена ?', 10000); 
+            do{
+                this.percentDeposit = prompt('Какой годовой процент?', 10);
+            }
+            while(this.percentDeposit === '' || isNaN(this.percentDeposit) || this.percentDeposit === null);
+            do{
+                this.moneyDeposit = prompt('Какая сумма заложена ?', 10000); 
+            }
+            while(this.moneyDeposit === '' || isNaN(this.moneyDeposit) || this.moneyDeposit === null);
+            
         }
     },
     calcSaveMoney: function(){
