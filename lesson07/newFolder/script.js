@@ -1,6 +1,8 @@
 'use strict';
 let score = document.getElementById('start'),
-    plusBtn1 = document.getElementsByTagName('button'),
+    plusBtn = document.getElementsByTagName('button'),
+    plusBtn1 = plusBtn[0],
+    plusBtn2 = plusBtn[1],
     cBox = document.querySelector('#deposit-check'),
     polya = document.querySelectorAll(".result-additional_income"),
     budgetMonthV = document.querySelector(".budget_month-value"),
