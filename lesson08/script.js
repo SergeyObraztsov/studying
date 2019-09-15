@@ -44,7 +44,7 @@ let appData = {
         });
         start.style.display = 'none';
         cancel.style.display = 'block';
-        cancel.addEventListener('click', this.reset)
+        cancel.addEventListener('click', this.reset);
         // expensesPlus.setAttribute('disabled', 'disabled');
         // incomePlus.setAttribute('disabled', 'disabled');
         
