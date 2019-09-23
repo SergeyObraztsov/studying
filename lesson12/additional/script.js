@@ -1,6 +1,7 @@
 'use strict';
 let hours = new Date().getHours();
 let day = new Date().getDay();
+
 if(hours >= 0 && hours < 4){
     console.log('Доброй ночи');
 } else if (hours >= 4 && hours < 12){
@@ -33,3 +34,5 @@ switch (day){
         console.log('Сегодня: суббота');
         break;
 }
+
+
