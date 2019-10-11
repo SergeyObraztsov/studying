@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function(){
     'use strict';
-
+ 
     // Timer
     function countTimer(deadline){
         let timerHours = document.querySelector('#timer-hours'),
@@ -231,6 +231,46 @@ window.addEventListener('DOMContentLoaded', function(){
 
     slider();
 
+    //RegEx
+    const calculator = () => {
+        const calc = document.querySelectorAll('.calc-item');
+        calc.forEach((elem) => {
+            elem.addEventListener('input', (item) => {
+                elem.value = elem.value.replace(/[^\d.]/, '');
+            });
+        }); 
+    };
+    
+    calculator();
+
+    //Photos
+    const changePhoto = () => {
+        const team = document.querySelector('.command');
+            
+        team.addEventListener('mouseover', (event) => {
+            let target = event.target;
+            
+            if (target.matches('img')){
+                let data = event.target.dataset.img;
+                event.target.dataset.img = event.target.src;
+                event.target.src = data;
+                
+            }
+            
+        });
+        team.addEventListener('mouseout', (event) => {
+            let target = event.target;
+            
+            if (target.matches('img')){
+                let data = event.target.dataset.img;
+                event.target.dataset.img = event.target.src;
+                event.target.src = data;
+            }
+            
+        });
+    };
+
+    changePhoto();
 
 
 });
