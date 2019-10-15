@@ -3,6 +3,7 @@ let money;
 
 const start = function(){
     do{
+        console.log('privet');
         money = prompt('Ваш месячный доход?', 20000);
         console.log('Ваш месячный доход:', money);
     }
